@@ -16,3 +16,5 @@ Simple todo app built with Vue.js
   live-server
   ```
 
+- Use this Fake REST API as your server:
+  [https://github.com/dmtrxw-demos/todos-json-server](https://github.com/dmtrxw-demos/todos-json-server)
