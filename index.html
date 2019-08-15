@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/css/main.css" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <h1 class="my-4">Todo App</h1>
+      <create-todo-form
+        @todo-created="pushTodoToState($event)"
+      ></create-todo-form>
+      <hr class="mb-4" />
+      <todo-list
+        @todo-removed="removeTodoFromState($event)"
+        :todos="todos"
+      ></todo-list>
+    </div>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <!-- Components Registration -->
+    <script src="/src/components/create-todo-form.js"></script>
+    <script src="/src/components/todo-list.js"></script>
+    <script src="/src/components/todo-list-item.js"></script>
+    <!-- Root -->
+    <script src="/src/main.js"></script>
+  </body>
+</html>
